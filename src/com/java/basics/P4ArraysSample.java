@@ -28,7 +28,7 @@ public class P4ArraysSample {
         matrix1[1][0] = 100;
         matrix1[1][1] = 200;
 
-        Object usersData[][] = new Object[3][2];
+        Object usersData[][] = new Object[3][3];
         usersData[0][0] = "sudhakar";
         usersData[0][1] = 36;
         usersData[0][2] = "test automation";
