@@ -17,9 +17,10 @@ public class P9CreateTool {
         t2.toolName = "uft";
         System.out.println(t2.toolType);
         System.out.println(P9CreateTool.toolType);
-        P9CreateTool.toolType = "Automation";
+        t2.toolType = "Automation";
         System.out.println(t2.toolType);
-
+        System.out.println(t1.toolType);
+        System.out.println(P9CreateTool.toolType);
     }
 
     String toolName;
