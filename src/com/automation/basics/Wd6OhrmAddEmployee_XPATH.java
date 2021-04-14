@@ -21,6 +21,7 @@ public class Wd6OhrmAddEmployee_XPATH {
         driver.findElement(By.partialLinkText("Add Emp")).click();
         driver.findElement(By.id("firstName")).sendKeys("sudhakar");
         driver.findElement(By.id("lastName")).sendKeys("k");
+        String empId = driver.findElement((By.id("employeeId"))).getAttribute("value");
         driver.findElement(By.id("btnSave")).click();
 
         //click on edit
@@ -37,5 +38,8 @@ public class Wd6OhrmAddEmployee_XPATH {
         if (!driver.findElement(By.id("personal_chkSmokeFlag")).isSelected()) {
             driver.findElement(By.id("personal_chkSmokeFlag")).click();
         }
+
+        String xp="//tr[contains(normalize-space(),'"+empId+"')]//input";
+
     }
 }
