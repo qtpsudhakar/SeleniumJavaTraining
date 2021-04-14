@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Wd3OhrmAddEmployee {
+public class Wd6OhrmAddEmployee_XPATH {
 
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:\\Software\\chromedriver.exe");
@@ -13,9 +13,9 @@ public class Wd3OhrmAddEmployee {
         driver.manage().window().maximize();
 
         driver.get("https://opensource-demo.orangehrmlive.com/");
-        driver.findElement(By.id("txtUsername")).sendKeys("admin");
-        driver.findElement(By.id("txtPassword")).sendKeys("admin123");
-        driver.findElement(By.id("btnLogin")).click();
+        driver.findElement(By.xpath("//input[@name='txtUsername']")).sendKeys("admin");
+        driver.findElement(By.xpath("//input[@name='txtPassword']")).sendKeys("admin123");
+        driver.findElement(By.xpath("//input[@value='LOGIN']")).click();
 
         driver.findElement(By.linkText("PIM")).click();
         driver.findElement(By.partialLinkText("Add Emp")).click();
