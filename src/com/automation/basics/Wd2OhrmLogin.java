@@ -14,6 +14,8 @@ public class Wd2OhrmLogin {
         driver.findElement(By.name("txtPassword")).sendKeys("admin123");
         driver.findElement(By.id("btnLogin")).click();
 
+        driver.findElements(By.tagName("a"));
+
         driver.quit();
     }
 }
