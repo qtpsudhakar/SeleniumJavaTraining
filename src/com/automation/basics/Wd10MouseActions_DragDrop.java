@@ -1,6 +1,7 @@
 package com.automation.basics;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -30,7 +31,10 @@ public class Wd10MouseActions_DragDrop {
         WebElement src= driver.findElement(By.id("draggable"));
         WebElement dst= driver.findElement(By.id("droppable"));
 
-        new Actions(driver).dragAndDrop(src,dst).build().perform();
+//        new Actions(driver).dragAndDrop(src,dst).build().perform();
+
+        Rectangle elmRect = dst.getRect();
+        new Actions(driver).dragAndDropBy(src,elmRect.x,elmRect.y).build().perform();
 
     }
 }
