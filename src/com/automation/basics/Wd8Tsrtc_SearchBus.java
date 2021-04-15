@@ -36,7 +36,7 @@ public class Wd8Tsrtc_SearchBus {
         driver.findElement(By.id("BtFid")).click();
         driver.findElement(By.xpath("//span[normalize-space()='A/C CLASS']")).click();
 
-        List<WebElement> lstServices = driver.findElements(By.cssSelector("div.srvceNO"));
+/*        List<WebElement> lstServices = driver.findElements(By.cssSelector("div.srvceNO"));
 
         System.out.println(lstServices.size());
         int counter =0;
@@ -48,5 +48,12 @@ public class Wd8Tsrtc_SearchBus {
         }
 
         System.out.println("total ac services are:"+counter);
+ */
+        List<WebElement> lstServices = driver.findElements(By.xpath("//div[@class='srvceNO' and not(ancestor::div[@style='display: none;'])]"));
+        System.out.println("total ac services are:"+lstServices.size());
+
+        for (WebElement elm:lstServices){
+                System.out.println(elm.getText());
+        }
     }
 }
