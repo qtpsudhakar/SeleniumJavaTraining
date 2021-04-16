@@ -3,13 +3,11 @@ package com.wd.pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class LoginPage extends OhrmBase{
 
     private By txtUserName = By.xpath("//input[@name='txtUsername']");
     private By txtPassword = By.xpath("//input[@name='txtPassword']");
     private By btnLogin = By.xpath("//input[@value='LOGIN']");
-
-    WebDriver driver;
 
     public void enterUserName(String userName){
         driver.findElement(txtUserName).sendKeys(userName);
