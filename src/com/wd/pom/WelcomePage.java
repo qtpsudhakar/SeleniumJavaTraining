@@ -8,12 +8,12 @@ public class WelcomePage extends OhrmBase{
     private By lnkAddEmployee = By.partialLinkText("Add Emp");
 
     public void clickOnPIM(){
-        driver.findElement(lnkPIM).click();
+        getElement(lnkPIM).click();
         System.out.println("Clicked PIM link");
     }
 
     public void clickOnAddEmployee(){
-        driver.findElement(lnkAddEmployee).click();
+        getElement(lnkAddEmployee).click();
         System.out.println("Clicked Add Employee link");
     }
 
