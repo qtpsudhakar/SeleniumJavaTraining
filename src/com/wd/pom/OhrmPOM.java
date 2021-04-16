@@ -6,7 +6,7 @@ public class OhrmPOM {
     public static void main(String[] args) {
 
         OhrmBase ohrm = new OhrmBase();
-        ohrm.OpenApplication();
+        ohrm.OpenApplication("chrome");
 
         LoginPage loginPage = new LoginPage();
         loginPage.enterUserName("admin");

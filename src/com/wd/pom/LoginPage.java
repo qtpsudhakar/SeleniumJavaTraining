@@ -13,7 +13,7 @@ public class LoginPage extends OhrmBase{
     private By btnLogin = By.xpath("//input[@value='LOGIN']");
 
     public void enterUserName(String userName){
-        driver.findElement(txtUserName).sendKeys(userName);
+        getElement(txtUserName).sendKeys(userName);
         System.out.println(userName+" entered on UserName Textbox");
     }
 
