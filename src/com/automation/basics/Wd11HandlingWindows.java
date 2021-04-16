@@ -22,6 +22,7 @@ public class Wd11HandlingWindows {
         driver.get("https://www.naukri.com/");
 
         driver.findElement(By.linkText("LOGIN")).click();
+
         driver.findElement(By.xpath("//span[text()='Sign in with Facebook']")).click();
 
         String mWndHandlerId = driver.getWindowHandle();

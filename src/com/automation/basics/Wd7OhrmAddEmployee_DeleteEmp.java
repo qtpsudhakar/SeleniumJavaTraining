@@ -3,7 +3,9 @@ package com.automation.basics;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Wd7OhrmAddEmployee_DeleteEmp {
 
@@ -27,6 +29,11 @@ public class Wd7OhrmAddEmployee_DeleteEmp {
         driver.findElement(By.linkText("Employee List")).click();
         //a[text()='0217']/../preceding-sibling::td/input
         String xp="//tr[contains(normalize-space(),'"+empId+"')]//input";
+
+        WebDriverWait wait =new WebDriverWait(driver,20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("resultTable")));
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xp)));
 
         Thread.sleep(1000);
         driver.findElement(By.xpath(xp)).click();
