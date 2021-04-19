@@ -49,7 +49,6 @@ public class Wd12HandlingAlerts {
 
         al.accept(); //clicks on ok/yes
 
-
         driver.findElement(By.id("toPlaceName")).sendKeys("BANGALORE");
         driver.findElement(By.linkText("BANGALORE")).click();
 
