@@ -3,6 +3,11 @@ package com.java.oops;
 public class Employee {
 
     private int age = 30; //20 - 60
+    private String empName;
+
+    Employee(String empName){ //constructor
+        this.empName = empName;
+    }
 
     public int getAge(){
         return this.age;
