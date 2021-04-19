@@ -24,7 +24,7 @@ public class Wd13JSExecutorSample {
 
         JavascriptExecutor jsDriver= (JavascriptExecutor) driver;
         //find element by selenium and perform action using JS
-//        jsDriver.executeScript("arguments[0].click()",driver.findElement(By.id("btnLogin")));
+//        jsDriver.executeScript("arguments[0].click();",driver.findElement(By.id("btnLogin")));
 
         //find element by JS and perform action using webdriver
 //        WebElement elm = (WebElement) jsDriver.executeScript("return document.getElementById('btnLogin');");

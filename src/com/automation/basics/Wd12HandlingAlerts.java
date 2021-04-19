@@ -39,6 +39,7 @@ public class Wd12HandlingAlerts {
         driver.findElement(By.linkText("HYDERABAD")).click();
 
         driver.findElement(By.id("searchBtn")).click();
+
         Thread.sleep((2000));
 
         if (al.getText().contains("Please select end place.")){
