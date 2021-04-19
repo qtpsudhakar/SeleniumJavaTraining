@@ -11,6 +11,10 @@ public class CreateCars {
 
         TataCars car2 = new TataTiago();
 
+        car2.addGPS();
+
+        Irs car3 = (Irs) car2;
+        car3.leftDrive();
 
     }
 }

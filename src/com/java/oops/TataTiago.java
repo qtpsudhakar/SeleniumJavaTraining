@@ -1,6 +1,6 @@
 package com.java.oops;
 
-public class TataTiago implements TataCars{
+public class TataTiago implements TataCars,Irs{
 
     public void addGPS(){
         System.out.println("GPS added to Tiago");
@@ -22,6 +22,10 @@ public class TataTiago implements TataCars{
         System.out.println("Rear Cam added to Tiago");
     }
     public void addSmallSpace(){
+
+    }
+
+    public void leftDrive() {
 
     }
 }
